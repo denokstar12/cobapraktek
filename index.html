@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digivolve Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Digivolve Studio</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#produk">Produk</a>
+    <a href="#kontak">Kontak</a>
+    <a href="#" onclick="showLogin()">Login</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </nav>
+</header>
+
+<section id="home">
+  <h2>Selamat Datang</h2>
+  <p>Kami menyediakan layanan digital kreatif untuk membantu bisnis Anda berkembang.</p>
+</section>
+
+<section id="about">
+  <h2>Tentang Kami</h2>
+  <p>Digivolve Studio adalah usaha digital yang fokus pada desain grafis, pembuatan website, dan manajemen media sosial.</p>
+</section>
+
+<section id="produk">
+  <h2>Produk Kami</h2>
+
+  <div class="card">
+    <h3>Desain Grafis</h3>
+    <p>Layanan desain logo, poster, dan konten sosial media.</p>
+    <button onclick="order('Desain Grafis')">Pesan</button>
+  </div>
+
+  <div class="card">
+    <h3>Pembuatan Website</h3>
+    <p>Membuat website profesional dan responsif.</p>
+    <button onclick="order('Website')">Pesan</button>
+  </div>
+
+  <div class="card">
+    <h3>Manajemen Sosial Media</h3>
+    <p>Mengelola akun media sosial bisnis Anda.</p>
+    <button onclick="order('Sosial Media')">Pesan</button>
+  </div>
+
+</section>
+
+<section id="kontak">
+  <h2>Kontak</h2>
+  <p>Email: digivolve@gmail.com</p>
+</section>
+
+<!-- LOGIN -->
+<div id="loginPage" class="modal">
+  <div class="modal-content">
+    <h2>Login</h2>
+    <input type="password" id="password" placeholder="Masukkan Password">
+    <button onclick="login()">Masuk</button>
+  </div>
+</div>
+
+<!-- ORDER -->
+<div id="orderPage" class="modal">
+  <div class="modal-content">
+    <h2>Form Pemesanan</h2>
+    <input type="text" placeholder="Nama">
+    <input type="text" id="productName" readonly>
+    <button onclick="alert('Pesanan berhasil!')">Kirim</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
